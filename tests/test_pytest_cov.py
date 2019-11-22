@@ -11,7 +11,6 @@ import coverage
 import py
 import pytest
 import virtualenv
-import xdist
 from fields import Namespace
 from process_tests import TestProcess as _TestProcess
 from process_tests import dump_on_error
@@ -970,7 +969,7 @@ def test_dist_missing_data(testdir):
         'install',
         'py==%s' % py.__version__,
         'pytest==%s' % pytest.__version__,
-        'pytest_xdist==%s' % xdist.__version__
+        'pytest_xdist'
 
     ])
     script = testdir.makepyfile(SCRIPT)
